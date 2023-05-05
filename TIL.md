@@ -45,3 +45,30 @@
     - I reset the stream with "null" to initialize properly.
     - I added `camera.play()` to the `startCamera` function to make sure the camera is working.
     - Should check for the methods and properties of the camera object.
+
+10. Thinking about how variables are communicated between `js` files
+    - JavaScript variables defined in separate files can communicate with each other through an HTML file, as long as the files are properly linked in the HTML document using the `<script>` tag.
+    - When multiple JavaScript files are linked to an HTML document, the global scope of the files is shared, and any variables defined in one file can be accessed from another file.
+    - However, it's important to note that JavaScript files are loaded and executed in the order that they appear in the HTML document, so you need to make sure that the dependent files are loaded before the files that use them.
+
+    ```html
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>JavaScript Variables and HTML</title>
+        <script src="file1.js"></script>
+        <script src="file2.js"></script>
+    </head>
+    <body>
+        <div id="output"></div>
+    </body>
+    </html>
+    ```
+
+    ```js
+    // file1.js
+    var message = "Hello World!";
+
+    // file2.js
+    document.getElementById("output").innerHTML = message;
+    ```
