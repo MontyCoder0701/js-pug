@@ -1,14 +1,20 @@
 doctype html
 html
     head
-        title I'm a Pug site!
+        title.head-title I'm a Pug site!
         link(rel='stylesheet', href='css/style.css')
     body
-        h1 I'm h1!
-        p I'm a paragraph!
+        h1.body-h1 I'm h1!
+        p.body-p I'm a paragraph!
         .modal
             .modal-content
                 span.close &times;
-                p Hello, world!
+                p I'm a modal!
+        button.lang-btn Change language
+        .lang-content 
+            a(href='#', class="korean-btn") Korean
+            br
+            a(href='#', class="english-btn") English
 
 script(src='js/modal.js')
+script(src='js/lang-change.js')
