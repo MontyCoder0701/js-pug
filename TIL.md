@@ -40,3 +40,8 @@
 8. Removing unused modules
     - Delete unnecessary modules from `package.json`.
     - Run `npm prune` to remove the unused modules.
+
+9. Camera not working even with right code
+    - I reset the stream with "null" to initialize properly.
+    - I added `camera.play()` to the `startCamera` function to make sure the camera is working.
+    - Should check for the methods and properties of the camera object.
