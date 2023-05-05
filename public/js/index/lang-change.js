@@ -12,7 +12,8 @@ const languages = {
         langButton: '언어 바꾸기',
         koreanButton: '한국어',
         englishButton: '영어',
-        calendarButton: '달력 보기'
+        calendarButton: '달력 보기',
+        modalText: '나는 모달이야'
     },
     english: {
         headTitle: "I'm a Pug site!",
@@ -21,7 +22,8 @@ const languages = {
         langButton: 'Change language',
         koreanButton: 'Korean',
         englishButton: 'English',
-        calendarButton: 'Go to Calendar'
+        calendarButton: 'Go to Calendar',
+        modalText: "I'm a modal!"
     }
 };
 
@@ -35,7 +37,8 @@ function updateContent(language) {
         langButton: langButtonText,
         koreanButton: koreanButtonText,
         englishButton: englishButtonText,
-        calendarButton
+        calendarButton,
+        modalText,
     } = languages[language];
 
     // 가져온 텍스트를 HTML에 적용
@@ -46,6 +49,7 @@ function updateContent(language) {
     koreanButton.innerHTML = koreanButtonText;
     englishButton.innerHTML = englishButtonText;
     document.querySelector('.cal-btn').innerHTML = calendarButton;
+    document.querySelector('.modal-text').innerHTML = modalText;
 }
 
 langButton.addEventListener('click', () => {
@@ -65,5 +69,10 @@ englishButton.addEventListener('click', (event) => {
     localStorage.setItem('language', 'english');
 });
 
-updateContent('english'); // 페이지가 로드될 때 기본적으로 영어로 설정
-localStorage.setItem('language', 'english'); 
+if (localStorage.getItem('language') === null) { // 페이지가 로드될 때 기본적으로 영어로 설정
+    updateContent('english');
+    localStorage.setItem('language', 'english');
+}
+else {
+    updateContent(localStorage.getItem('language')); // 기존에 있다면 저장된 언어로 설정
+}

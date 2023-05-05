@@ -1,14 +1,17 @@
 // 저장한 언어를 불러오기 
 var language = localStorage.getItem('language');
+const backButton = document.querySelector('.back-btn');
 
 const languages = {
     korean: {
         headTitle: '달력 페이지',
         bodyH1: '나는 달력이야',
+        backText: '뒤로가기',
     },
     english: {
         headTitle: 'Calendar page',
         bodyH1: "I'm calendar!",
+        backText: 'Go back',
     }
 };
 
@@ -18,11 +21,17 @@ function updateContent(language) {
     const {
         headTitle,
         bodyH1,
+        backText,
     } = languages[language];
 
     // 가져온 텍스트를 HTML에 적용
     document.querySelector('.head-title').innerHTML = headTitle;
     document.querySelector('.body-h1').innerHTML = bodyH1;
+    backButton.innerHTML = backText;
 }
 
 updateContent(language);
+
+backButton.addEventListener('click', (event) => {
+    window.location.href = '/';
+});
