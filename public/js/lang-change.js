@@ -11,7 +11,8 @@ const languages = {
         bodyP: '나는 P야',
         langButton: '언어 바꾸기',
         koreanButton: '한국어',
-        englishButton: '영어'
+        englishButton: '영어',
+        calendarButton: '달력 보기'
     },
     english: {
         headTitle: 'This is a Pug site',
@@ -19,7 +20,8 @@ const languages = {
         bodyP: 'I am P',
         langButton: 'Change language',
         koreanButton: 'Korean',
-        englishButton: 'English'
+        englishButton: 'English',
+        calendarButton: 'Go to Calendar'
     }
 };
 
@@ -32,7 +34,8 @@ function updateContent(language) {
         bodyP,
         langButton: langButtonText,
         koreanButton: koreanButtonText,
-        englishButton: englishButtonText
+        englishButton: englishButtonText,
+        calendarButton
     } = languages[language];
 
     // 가져온 텍스트를 HTML에 적용
@@ -42,6 +45,7 @@ function updateContent(language) {
     langButton.innerHTML = langButtonText;
     koreanButton.innerHTML = koreanButtonText;
     englishButton.innerHTML = englishButtonText;
+    document.querySelector('.cal-btn').innerHTML = calendarButton;
 }
 
 langButton.addEventListener('click', () => {
