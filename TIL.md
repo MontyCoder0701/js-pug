@@ -36,3 +36,7 @@
 7. Can't use import error
     - This happens because this is not a ES6 or ES module build system.
     - Initialize with the script tags instead.
+
+8. Removing unused modules
+    - Delete unnecessary modules from `package.json`.
+    - Run `npm prune` to remove the unused modules.
