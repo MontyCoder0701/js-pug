@@ -1,9 +1,9 @@
-let camera_button = document.querySelector(".camera-btn");
-let video = document.querySelector(".video");
+const cameraButton = document.querySelector(".camera-btn");
+const video = document.querySelector(".video");
 
 let stream = null;
 
-camera_button.addEventListener('click', async function () {
+cameraButton.addEventListener('click', async function () {
     try {
         let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
         console.log("Successfully got user media:", stream);

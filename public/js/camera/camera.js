@@ -6,11 +6,13 @@ const languages = {
         headTitle: '카메라 페이지',
         bodyH1: '나는 카메라야',
         backText: '뒤로가기',
+        cameraButton: '카메라 켜기',
     },
     english: {
         headTitle: 'Camera page',
         bodyH1: "I'm camera!",
         backText: 'Go back',
+        cameraButton: 'Start camera',
     }
 };
 
@@ -21,12 +23,14 @@ function updateContent(language) {
         headTitle,
         bodyH1,
         backText,
+        cameraButton,
     } = languages[language];
 
     // 가져온 텍스트를 HTML에 적용
     document.querySelector('.head-title').innerHTML = headTitle;
     document.querySelector('.body-h1').innerHTML = bodyH1;
     backButton.innerHTML = backText;
+    document.querySelector('.camera-btn').innerHTML = cameraButton;
 }
 
 updateContent(language);
