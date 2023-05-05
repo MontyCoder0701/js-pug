@@ -10,11 +10,15 @@ html
             .modal-content
                 span.close &times;
                 p I'm a modal!
-        button.lang-btn Change language
-        .lang-content 
-            a(href='#', class="korean-btn") Korean
-            br
-            a(href='#', class="english-btn") English
-
+        div
+            button.lang-btn Change language
+            .lang-content 
+                a(href='#', class="korean-btn") Korean
+                br
+                a(href='#', class="english-btn") English
+        div        
+            button.cal-btn Go to calendar
+        
+script(src='js/index.js')
 script(src='js/modal.js')
 script(src='js/lang-change.js')

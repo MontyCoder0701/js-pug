@@ -11,7 +11,7 @@ npm install
 ## Run the app
 
 ```bash
-node index.js 
+node server.js 
 ```
 
 or
