@@ -18,6 +18,10 @@ app.get("/calendar", (req, res) => {
     res.render("calendar");
 });
 
+app.get("/camera", (req, res) => {
+    res.render("camera");
+});
+
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
     console.log("http://localhost:3000")

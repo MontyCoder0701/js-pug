@@ -13,7 +13,8 @@ const languages = {
         koreanButton: '한국어',
         englishButton: '영어',
         calendarButton: '달력 보기',
-        modalText: '나는 모달이야'
+        cameraButton: '카메라 보기',
+        modalText: '나는 모달이야',
     },
     english: {
         headTitle: "I'm a Pug site!",
@@ -23,7 +24,8 @@ const languages = {
         koreanButton: 'Korean',
         englishButton: 'English',
         calendarButton: 'Go to calendar',
-        modalText: "I'm a modal!"
+        cameraButton: 'Go to camera',
+        modalText: "I'm a modal!",
     }
 };
 
@@ -38,6 +40,7 @@ function updateContent(language) {
         koreanButton: koreanButtonText,
         englishButton: englishButtonText,
         calendarButton,
+        cameraButton,
         modalText,
     } = languages[language];
 
@@ -49,6 +52,7 @@ function updateContent(language) {
     koreanButton.innerHTML = koreanButtonText;
     englishButton.innerHTML = englishButtonText;
     document.querySelector('.cal-btn').innerHTML = calendarButton;
+    document.querySelector('.cam-btn').innerHTML = cameraButton;
     document.querySelector('.modal-text').innerHTML = modalText;
 }
 
