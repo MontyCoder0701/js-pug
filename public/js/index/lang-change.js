@@ -15,9 +15,9 @@ const languages = {
         calendarButton: '달력 보기'
     },
     english: {
-        headTitle: 'This is a Pug site',
-        bodyH1: 'I am h1',
-        bodyP: 'I am P',
+        headTitle: "I'm a Pug site!",
+        bodyH1: "I'm h1!",
+        bodyP: "I'm a paragraph!",
         langButton: 'Change language',
         koreanButton: 'Korean',
         englishButton: 'English',
@@ -56,11 +56,14 @@ langButton.addEventListener('click', () => {
 koreanButton.addEventListener('click', (event) => {
     event.preventDefault(); // a 태그의 기본 동작을 막음
     updateContent('korean');
+    localStorage.setItem('language', 'korean');
 });
 
 englishButton.addEventListener('click', (event) => {
     event.preventDefault();
     updateContent('english');
+    localStorage.setItem('language', 'english');
 });
 
 updateContent('english'); // 페이지가 로드될 때 기본적으로 영어로 설정
+localStorage.setItem('language', 'english'); 

@@ -24,3 +24,8 @@
 4. Routing not working ("unable to GET")
     - `calendar.pug` is in the `views` folder, so it can be rendered.
     - GET was not working so I had to add `app.get("/calendar", (req, res) => res.render("calendar"));` to `server.js` to render the `calendar.pug` file.
+
+5. How to apply the language setting once it is selected
+    - I saved it to `localStorage` and applied it to the language setting when the page is loaded.
+    - Make sure to apply it for default language setting as well.
+    - I had trouble fetching the value with the key, but I noticed I used the wrong key name.

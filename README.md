@@ -20,6 +20,6 @@ or
 npm start
 ```
 
-## TIL while making this
+## TIL while making this (Troubleshooting)
 
 [TIL troubleshooting](TIL.md)
