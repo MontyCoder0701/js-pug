@@ -22,7 +22,7 @@ const languages = {
         langButton: 'Change language',
         koreanButton: 'Korean',
         englishButton: 'English',
-        calendarButton: 'Go to Calendar',
+        calendarButton: 'Go to calendar',
         modalText: "I'm a modal!"
     }
 };
