@@ -29,3 +29,10 @@
     - I saved it to `localStorage` and applied it to the language setting when the page is loaded.
     - Make sure to apply it for default language setting as well.
     - I had trouble fetching the value with the key, but I noticed I used the wrong key name.
+
+6. MIME error
+    - This can happen when the program can't find the file. Check the directory and file name.
+
+7. Can't use import error
+    - This happens because this is not a ES6 or ES module build system.
+    - Initialize with the script tags instead.
