@@ -11,7 +11,7 @@
 2. `npm start` not working
 
     ```json
-    start: "node server.js"
+    "start": "node server.js"
     ```
 
     Add `start` to the script so that `npm start` is a runnable script.
