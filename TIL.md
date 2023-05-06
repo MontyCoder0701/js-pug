@@ -46,7 +46,7 @@
     - I added `camera.play()` to the `startCamera` function to make sure the camera is working.
     - Should check for the methods and properties of the camera object.
 
-10. Thinking about how variables are communicated between `js` files
+10. Thinking about how variables are communicated between `js` files (for *client-side* JavaScript)
     - JavaScript variables defined in separate files can communicate with each other through an HTML file, as long as the files are properly linked in the HTML document using the `<script>` tag.
     - When multiple JavaScript files are linked to an HTML document, the global scope of the files is shared, and any variables defined in one file can be accessed from another file.
     - However, it's important to note that JavaScript files are loaded and executed in the order that they appear in the HTML document, so you need to make sure that the dependent files are loaded before the files that use them.
@@ -78,7 +78,7 @@
     - You can use `alert()` to debug.
     - After you checked the variable with `alert()`, apply your logic in the code.
 
-12. Making variables/functions accessible in another file when it's not a not a ES6 or ES module build system
+12. Making variables/functions accessible in another file when it's not a not a ES6 or ES module build system (for *server-side* JavaScript)
     - Use `module.exports` to export the variable/function.
     - Then use `require()` to import the variable/function.
 
@@ -100,3 +100,7 @@
     - Put `require('dotenv').config();`.
     - Make sure the module is installed through `npm install dotenv`.
     - Then access the variables with `process.env.VARIABLE_NAME`.
+
+14. `require` is not defined
+    - This happens when you are using the require function in client-side JavaScript code that is meant to run in a web browser.
+    - However, require is not a built-in function in web browsers and is only available in server-side JavaScript environments like Node.js.

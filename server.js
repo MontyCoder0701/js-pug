@@ -29,8 +29,7 @@ app.get("/register", (req, res) => {
     res.render("register");
 });
 
-// connect to db
-var db = require('./db.js')
+var db = require("./db");
 console.log(db.con);
 
 // run the server
