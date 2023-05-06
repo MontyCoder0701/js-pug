@@ -21,6 +21,14 @@ app.get("/camera", (req, res) => {
     res.render("camera");
 });
 
+app.get("/login", (req, res) => {
+    res.render("login");
+});
+
+app.get("/register", (req, res) => {
+    res.render("register");
+});
+
 // connect to db
 var db = require('./db.js')
 console.log(db.con);
