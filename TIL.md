@@ -72,3 +72,8 @@
     // file2.js
     document.getElementById("output").innerHTML = message;
     ```
+
+11. Debugging
+    - If the variable is not in the global scope, you cannot access it from the console with `console.log()`.
+    - You can use `alert()` to debug.
+    - After you checked the variable with `alert()`, apply your logic in the code.
