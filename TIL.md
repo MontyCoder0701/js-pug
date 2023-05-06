@@ -51,29 +51,46 @@
     - When multiple JavaScript files are linked to an HTML document, the global scope of the files is shared, and any variables defined in one file can be accessed from another file.
     - However, it's important to note that JavaScript files are loaded and executed in the order that they appear in the HTML document, so you need to make sure that the dependent files are loaded before the files that use them.
 
-    ```html
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>JavaScript Variables and HTML</title>
-        <script src="file1.js"></script>
-        <script src="file2.js"></script>
-    </head>
-    <body>
-        <div id="output"></div>
-    </body>
-    </html>
-    ```
+        ```html
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>JavaScript Variables and HTML</title>
+            <script src="file1.js"></script>
+            <script src="file2.js"></script>
+        </head>
+        <body>
+            <div id="output"></div>
+        </body>
+        </html>
+        ```
 
-    ```js
-    // file1.js
-    var message = "Hello World!";
+        ```js
+        // file1.js
+        var message = "Hello World!";
 
-    // file2.js
-    document.getElementById("output").innerHTML = message;
-    ```
+        // file2.js
+        document.getElementById("output").innerHTML = message;
+        ```
 
 11. Debugging
     - If the variable is not in the global scope, you cannot access it from the console with `console.log()`.
     - You can use `alert()` to debug.
     - After you checked the variable with `alert()`, apply your logic in the code.
+
+12. Making variables/functions accessible in another file when it's not a not a ES6 or ES module build system
+    - use `module.exports` to export the variable/function.
+    - then use `require()` to import the variable/function.
+
+        ``` js
+        // file1.js
+        module.exports = {
+        myVar: "Hello World"
+        };
+        ```
+
+        ``` js
+        // file2.js
+        const file1 = require("./file1.js");
+        console.log(file1.myVar); // "Hello World"
+        ```

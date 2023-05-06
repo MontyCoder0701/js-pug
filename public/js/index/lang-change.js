@@ -10,6 +10,8 @@ const languages = {
         bodyH1: '나는 h1야',
         bodyP: '나는 P야',
         langButton: '언어 바꾸기',
+        loginButton: '로그인',
+        registerButton: '회원가입',
         koreanButton: '한국어',
         englishButton: '영어',
         calendarButton: '달력 보기',
@@ -20,6 +22,8 @@ const languages = {
         headTitle: "I'm a Pug site!",
         bodyH1: "I'm h1!",
         bodyP: "I'm a paragraph!",
+        loginButton: 'Login',
+        registerButton: 'Register',
         langButton: 'Change language',
         koreanButton: 'Korean',
         englishButton: 'English',
@@ -36,6 +40,8 @@ function updateContent(language) {
         headTitle,
         bodyH1,
         bodyP,
+        loginButton,
+        registerButton,
         langButton: langButtonText,
         koreanButton: koreanButtonText,
         englishButton: englishButtonText,
@@ -48,6 +54,8 @@ function updateContent(language) {
     document.querySelector('.head-title').innerHTML = headTitle;
     document.querySelector('.body-h1').innerHTML = bodyH1;
     document.querySelector('.body-p').innerHTML = bodyP;
+    document.querySelector('.login-btn').innerHTML = loginButton;
+    document.querySelector('.register-btn').innerHTML = registerButton;
     langButton.innerHTML = langButtonText;
     koreanButton.innerHTML = koreanButtonText;
     englishButton.innerHTML = englishButtonText;
