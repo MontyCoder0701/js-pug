@@ -79,8 +79,8 @@
     - After you checked the variable with `alert()`, apply your logic in the code.
 
 12. Making variables/functions accessible in another file when it's not a not a ES6 or ES module build system
-    - use `module.exports` to export the variable/function.
-    - then use `require()` to import the variable/function.
+    - Use `module.exports` to export the variable/function.
+    - Then use `require()` to import the variable/function.
 
         ``` js
         // file1.js
@@ -94,3 +94,9 @@
         const file1 = require("./file1.js");
         console.log(file1.myVar); // "Hello World"
         ```
+
+13. Environment variables
+    - Create an `.env` file in the root directory.
+    - Put `require('dotenv').config();`.
+    - Make sure the module is installed through `npm install dotenv`.
+    - Then access the variables with `process.env.VARIABLE_NAME`.
